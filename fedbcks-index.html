@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas - Feedbacks e Atualizações</title>
+    <link rel="stylesheet" href="fedbcks-styles.css">
+</head>
+<body>
+
+    <div class="background-container"></div>
+    
+    <header>
+        <nav class="navbar">
+            <a class="navbar-title" href="index.html">Sistema de Notas</a>
+            <div class="mobile-menu-icon hamburger" onclick="toggleMenu()">
+                <input class="checkbox" type="checkbox" id="menu-checkbox" />
+                <label for="menu-checkbox">
+                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                        <path class="line lineTop" d="M6 11L44 11"></path>
+                        <path class="line lineMid" d="M6 24H43"></path>
+                        <path class="line lineBottom" d="M6 37H43"></path>
+                    </svg>
+                </label>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="inicio-index.html" class="menu__link">Início</a></li>
+                <li><a href="doc-index.html" class="menu__link">Documentação</a></li>
+                <li><a href="PFinal-index.html" class="menu__link">Produto Final</a></li>
+                <li><a href="codigo-index.html" class="menu__link">Código</a></li>
+                <li><a href="fedbcks-index.html" class="menu__link">Feedbacks e Atualizações</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="box">
+            <h1 id="titulo-principal">Feedbacks e Atualizações</h1>
+
+            <p>
+                Após a finalização do sistema de notas, o projeto foi enviado para os professores do
+                colégio Waldemar Mundin (instituição escolhida para o projeto), onde os professores
+                fizeram testes no projeto e aprentaram seus feedbacks e sugestões. 
+            </p>
+            <p>
+                O sistema apresenta uma interface de fácil utilização, tornando simples o acessso do 
+                usuário e gerenciando as informações das notas dos alunos. Essa usabilidade é um ponto 
+                forte, especialmente para quem busca uma solução prática e direta.
+            </p>
+            <p>
+                No entanto, para torná-lo ainda mais robusto e completo, seria importante considerar 
+                algumas melhorias futuras, como:
+            </p>
+
+            <dl>
+                <dt>Melhorar o design responsivo:</dt>
+
+                <dd>
+                    Garantir que o sistema se adapte perfeitamente a diferentes
+                    dispositivos, como smartphones e tablets, é essencial para uma experiência consistente e 
+                    acessível.
+                </dd>
+
+                <dt>Funcionalidade de gerenciamento dinâmico:</dt>
+
+                <dd>
+                    A adição de recursos para inserir e remover alunos
+                    e suas respectivas notas traria mais flexibilidade ao sistema, tornando-o mais funcional para 
+                    os cenários reais.
+                </dd>
+
+
+                <dt>Armazenamento:</dt>
+
+                <dd>
+                    Implementar um sistema de armazenamento de notas para permitir a persistência
+                    das notas dos alunos, evitando a perda de dados em caso de falha do navegador.
+                </dd>
+            </dl>
+        </div>
+    </div>
+ <script src="fedbcks-script.js"></script>
+</body>
+</html>

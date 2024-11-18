@@ -1,0 +1,677 @@
+/*botões navbar*/
+
+a {
+    text-decoration: none;
+  }
+
+  .menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+
+
+
+/* FONTE */
+.ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: fixed; /* ou fixed para mantê-la fixa ao rolar a página */
+    z-index: 10; /* Garante que a navbar fique acima do fundo */
+    width: 100%; /* Garante que ocupe toda a largura */
+    top: 0; /* Para alinhar ao topo se for fixed */
+    left: 0; /* Para alinhar ao lado esquerdo */
+    box-sizing: border-box; /* Inclui o padding dentro do tamanho total */
+    margin-bottom: 40px;
+  }
+
+.navbar-title {
+    font-size: 2.2em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo do ícone do menu mobile */
+.hamburger {
+    display: none; /* Ícone escondido por padrão */
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.line {
+    transition: 0.5s;
+    stroke-width: 6px;
+    stroke: #ffffff;
+}
+
+.lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+}
+
+.lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+}
+
+.lineMid {
+    stroke-dasharray: 40 40;
+}
+
+/* Animações para o menu mobile */
+.hamburger .checkbox:checked + label svg .line {
+    stroke: #ffffff;
+}
+
+.hamburger .checkbox:checked + label svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked + label svg .lineMid {
+    stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked + label svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list.active {
+        display: flex; /* Mostra o menu quando o ícone é clicado */
+    }
+
+    .hamburger {
+        display: flex; /* Exibe o ícone apenas em telas menores */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+        font-size: 3em;
+    }
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("codigo.jpg");/*notas*/
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+
+/* Alinhamento do conteúdo html */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p{
+  text-align: justify;
+  text-indent: 50px;
+}
+
+p, dd {
+  font-size: 20px;
+}
+
+dt {
+  font-size: 25px;
+}
+/*alinhamento do conteúdo html */
+.container {
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 850px;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo apareça acima do fundo */
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 10px;
+ 
+}
+
+@media(max-width: 768px){
+    .container {
+      align-items: center;
+        width: 100%;
+        height: 340vh;
+    }
+}
+
+/*card html*/
+.card {
+    
+    position: absolute;
+      width: 800px;
+      height: 400px;
+      margin: 140px;
+      background-color: #24233b;
+      border-radius: 10px;
+      z-index: 1;
+      box-shadow: 0px 10px 10px rgb(73, 70, 92);
+      transition: 0.5s;
+      left: 300px;
+      top: 2050px;
+    }
+
+
+    
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 10px black;
+    }
+    
+    .top {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    
+    .circle {
+      padding: 0 4px;
+    }
+    
+    .circle2 {
+      display: inline-block;
+      align-items: center;
+      width: 10px;
+      height: 10px;
+      padding: 1px;
+      border-radius: 5px;
+    }
+    
+    .red {
+      background-color: #ff605c;
+    }
+    
+    .yellow {
+      background-color: #ffbd44;
+    }
+    
+    .green {
+      background-color: #00ca4e;
+    }
+    
+    .header {
+      margin: 5px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+    
+    #title2 {
+      color: white;
+      padding-left: 50px;
+      font-size: 15px;
+    }
+    
+    .code-container {
+     
+      text-align: center;
+    }
+    #code {
+      position: fixed;
+      width: 750px;
+      height: 350px;
+      resize: none;
+      background-color: rgb(73, 70, 92);
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 10px;
+    }
+    #code:focus {
+      outline: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+          position: relative; /* Evita problemas com posicionamento fixo */
+          width: 100%; /* Ocupa 90% da largura da tela */
+          height: 400px; /* Ajusta altura dinamicamente */
+          margin: 20px auto; /* Centraliza o card */
+          left: 0; /* Remove deslocamentos laterais */
+          top: auto; /* Remove deslocamentos verticais */
+      }
+  }
+
+  @media (max-width: 768px) {
+    #code {
+      width: 750px; /* O campo ocupará toda a largura do card */
+      max-width: calc(100% - 20px); /* Evita ultrapassar os limites */
+      height: 350px; /* Altura ajustável conforme necessário */
+      overflow-wrap: break-word; /* Quebra palavras longas para evitar estouro */
+      padding: 10px; /* Garante espaçamento interno */
+      box-sizing: border-box; /* Inclui o padding dentro da largura */
+      margin-right: 340px;
+  }
+  }
+  
+
+
+/* alinhamento do conteúdo css*/
+
+.css-container {
+    width: 100%;
+    height: 385vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-box {
+    width: 850px;
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); 
+    border-radius: 10px;
+}
+
+@media(max-width: 768px){
+    .css-container {
+        width: 100%;
+        height: 380vh;
+    }
+}
+
+/*card css*/
+.css-card {
+    
+    position: absolute;
+      width: 800px;
+      height: 400px;
+      margin: 140px;
+      background-color: #24233b;
+      border-radius: 10px;
+      z-index: 1;
+      box-shadow: 0px 10px 10px rgb(73, 70, 92);
+      transition: 0.5s;
+      left: 300px;
+      top: 4700px;
+    }
+    
+    .css-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 10px black;
+    }
+    
+    .css-top {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    
+    .css-circle {
+      padding: 0 4px;
+    }
+    
+    .css-circle2 {
+      display: inline-block;
+      align-items: center;
+      width: 10px;
+      height: 10px;
+      padding: 1px;
+      border-radius: 5px;
+    }
+    
+    .css-red {
+      background-color: #ff605c;
+    }
+    
+    .css-yellow {
+      background-color: #ffbd44;
+    }
+    
+    .css-green {
+      background-color: #00ca4e;
+    }
+    
+    .css-header {
+      margin: 5px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+    
+    #css-title2 {
+      color: white;
+      padding-left: 50px;
+      font-size: 15px;
+    }
+    
+    .csscode-container {
+        
+      text-align: center;
+    }
+    #css-code {
+      width: 750px;
+      height: 350px;
+      resize: none;
+      background-color: rgb(73, 70, 92);
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 10px;
+    }
+    #css-code:focus {
+      outline: none !important;
+    }
+   
+
+    
+    @media (max-width: 768px) {
+      .css-card {
+          position: relative; /* Evita problemas com posicionamento fixo */
+          width: 100%; /* Ocupa 90% da largura da tela */
+          height: 400px; /* Ajusta altura dinamicamente */
+          margin: 20px auto; /* Centraliza o card */
+          left: 0; /* Remove deslocamentos laterais */
+          top: auto; /* Remove deslocamentos verticais */
+      }
+  }
+
+  @media (max-width: 768px) {
+    #css-code {
+      width: 1400px; /* O campo ocupará toda a largura do card */
+      max-width: calc(100% - 20px); /* Evita ultrapassar os limites */
+      height: 350px; /* Altura ajustável conforme necessário */
+      overflow-wrap: break-word; /* Quebra palavras longas para evitar estouro */
+      padding: 10px; /* Garante espaçamento interno */
+      box-sizing: border-box; /* Inclui o padding dentro da largura */
+
+      margin-left: 10px;
+  }
+  }
+
+
+/* alinhamento do conteúdo javascript*/
+
+.java-container {
+    width: 100%;
+    height: 270vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.java-box {
+    width: 850px;
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); 
+    border-radius: 10px;
+}
+
+@media(max-width: 768px){
+    .java-container {
+        width: 100%;
+        height: 350vh;
+    }
+}
+
+
+
+dt {
+    font-weight: bold;
+}
+/*card javascript*/
+.java-card {
+    
+    position: absolute;
+      width: 800px;
+      height: 400px;
+      margin: 140px;
+      background-color: #24233b;
+      border-radius: 10px;
+      z-index: 1;
+      box-shadow: 0px 10px 10px rgb(73, 70, 92);
+      transition: 0.5s;
+      left: 300px;
+      top: 6930px;
+    }
+    
+    .java-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 10px black;
+    }
+    
+    .java-top {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    
+    .java-circle {
+      padding: 0 4px;
+    }
+    
+    .java-circle2 {
+      display: inline-block;
+      align-items: center;
+      width: 10px;
+      height: 10px;
+      padding: 1px;
+      border-radius: 5px;
+    }
+    
+    .java-red {
+      background-color: #ff605c;
+    }
+    
+    .java-yellow {
+      background-color: #ffbd44;
+    }
+    
+    .java-green {
+      background-color: #00ca4e;
+    }
+    
+    .java-header {
+      margin: 5px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+    
+    #java-title2 {
+      color: white;
+      padding-left: 50px;
+      font-size: 15px;
+    }
+    
+    .javacode-container {
+        
+      text-align: center;
+    }
+    #java-code {
+      width: 750px;
+      height: 350px;
+      resize: none;
+      background-color: rgb(73, 70, 92);
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 10px;
+    }
+    #java-code:focus {
+      outline: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .java-card {
+          position: relative; /* Evita problemas com posicionamento fixo */
+          width: 100%; /* Ocupa 90% da largura da tela */
+          height: 400px; /* Ajusta altura dinamicamente */
+          margin: 20px auto; /* Centraliza o card */
+          left: 0; /* Remove deslocamentos laterais */
+          top: auto; /* Remove deslocamentos verticais */
+      }
+  }
+
+  @media (max-width: 768px) {
+    #java-code {
+      width: 1400px; /* O campo ocupará toda a largura do card */
+      max-width: calc(100% - 20px); /* Evita ultrapassar os limites */
+      height: 350px; /* Altura ajustável conforme necessário */
+      overflow-wrap: break-word; /* Quebra palavras longas para evitar estouro */
+      padding: 10px; /* Garante espaçamento interno */
+      box-sizing: border-box; /* Inclui o padding dentro da largura */
+
+      margin-left: 10px;
+  }
+  }
+
+
+
+    h1{
+      font-size: 50px;
+    }
+
+    h2{
+      font-size: 35px;
+    }
+
+    h3{
+      font-size: 25px;
+    }
+
+@media (max-width: 768px) {
+
+}
+
+    

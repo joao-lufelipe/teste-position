@@ -1,0 +1,281 @@
+/*botões navbar*/
+
+a {
+    text-decoration: none;
+  }
+
+  .menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+
+
+
+/* FONTE */
+.ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 10; /* Garante que a navbar fique acima do fundo */
+}
+
+.navbar-title {
+    font-size: 2.2em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo do ícone do menu mobile */
+.hamburger {
+    display: none; /* Ícone escondido por padrão */
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.line {
+    transition: 0.5s;
+    stroke-width: 6px;
+    stroke: #ffffff;
+}
+
+.lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+}
+
+.lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+}
+
+.lineMid {
+    stroke-dasharray: 40 40;
+}
+
+/* Animações para o menu mobile */
+.hamburger .checkbox:checked + label svg .line {
+    stroke: #ffffff;
+}
+
+.hamburger .checkbox:checked + label svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked + label svg .lineMid {
+    stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked + label svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list.active {
+        display: flex; /* Mostra o menu quando o ícone é clicado */
+    }
+
+    .hamburger {
+        display: flex; /* Exibe o ícone apenas em telas menores */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+        font-size: 3em;
+    }
+}
+
+/* Fundo da página */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("feedback.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+
+@media (max-width: 768px) {
+    .background-container {
+        background-repeat: repeat-x; /* Ajusta o fundo para ocupar toda a altura do conteúdo */
+        background-size: cover;
+        height: 140vh; /* Garante que a imagem de fundo cubra a tela */
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+.container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 850px;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo apareça acima do fundo */
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 10px;
+}
+
+@media(max-width: 768px){
+    .container {
+        width: 100%;
+        height: 130vh;
+    }
+}
+
+h1{
+    font-size: 50px;
+}
+
+dt{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p, dd{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 2em;
+}
+
+

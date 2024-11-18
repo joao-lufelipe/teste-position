@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Notas - Produto Final</title>
+  <link rel="stylesheet" href="PFinal-styles.css">
+</head>
+<body>
+
+    <div class="background-container"></div>
+  <!-- Container Principal -->
+
+  <!-- navbar -->
+  <header>
+    <nav class="navbar">
+        <a class="navbar-title" href="index.html">Sistema de Notas</a>
+        <div class="mobile-menu-icon hamburger" onclick="toggleMenu()">
+            <input class="checkbox" type="checkbox" id="menu-checkbox" />
+            <label for="menu-checkbox">
+                <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                    <path class="line lineTop" d="M6 11L44 11"></path>
+                    <path class="line lineMid" d="M6 24H43"></path>
+                    <path class="line lineBottom" d="M6 37H43"></path>
+                </svg>
+            </label>
+        </div>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="inicio-index.html" class="menu__link">Início</a></li>
+          <li><a href="doc-index.html" class="menu__link">Documentação</a></li>
+          <li><a href="PFinal-index.html" class="menu__link">Produto Final</a></li>
+          <li><a href="codigo-index.html" class="menu__link">Código</a></li>
+          <li><a href="fedbcks-index.html" class="menu__link">Feedbacks e Atualizações</a></li>
+        </ul>
+    </nav>
+
+    <script src="PFinal-script.js"></script>
+  
+  <div class="container">
+    <h1>Sistema de Notas</h1>
+
+    <!-- Tabela Inicial com Turmas -->
+    <h2>Turmas</h2>
+    <table id="resumo-tabela">
+      <thead>
+        <tr>
+          <th>Turma</th>
+          <th>Média</th>
+          <th>Faltas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- As linhas serão carregadas dinamicamente -->
+      </tbody>
+    </table>
+
+    <!-- Tabela de Pesquisa e Alteração de Notas -->
+    <h2>Pesquisar Aluno e Alterar Nota</h2>
+    <div class="input-area">
+      <input type="text" id="pesquisa-aluno" placeholder="Digite o nome do aluno">
+      <button id="btn-pesquisar">Pesquisar</button> 
+    </div>
+
+    <table id="tabela-editar">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Turma</th>
+          <th>N1</th>
+          <th>N2</th>
+          <th>N3</th>
+          <th>N4</th>
+          <th>Média</th>
+          <th>Situação</th>
+          <th>Atualização</th>
+        </tr>
+      </thead>
+      <tbody class="resultado">
+        <!-- As linhas serão carregadas dinamicamente -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Tooltip para exibir detalhes de turma -->
+  <div id="tooltip" class="tooltip">
+    <h3 id="tooltip-titulo"></h3>
+    <input type="text" id="filtro-tooltip" placeholder="Filtrar alunos">
+    <table id="tooltip-tabela">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Média</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+  </div>
+
+  <!-- Tooltip detalhado do aluno -->
+  <div id="tooltip-detalhe" class="tooltip-detalhe"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="PFinal-script.js"></script>
+</body>
+</html>

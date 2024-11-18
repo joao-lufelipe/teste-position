@@ -1,0 +1,408 @@
+/*fonte*/
+
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* aplica a fonte em todo o conteúdo da página*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/*//////////////////////////////////////////////////////*/
+
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  position: fixed; /* ou fixed para mantê-la fixa ao rolar a página */
+  z-index: 10; /* Garante que a navbar fique acima do fundo */
+  width: 100%; /* Garante que ocupe toda a largura */
+  top: 0; /* Para alinhar ao topo se for fixed */
+  left: 0; /* Para alinhar ao lado esquerdo */
+  box-sizing: border-box; /* Inclui o padding dentro do tamanho total */
+  margin-bottom: 40px;
+}
+
+.navbar-title {
+  font-size: 2.2em;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilo do ícone do menu mobile */
+.hamburger {
+  display: none; /* Ícone escondido por padrão */
+  height: 50px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: #ffffff;
+}
+
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+/* Animações para o menu mobile */
+.hamburger .checkbox:checked + label svg .line {
+  stroke: #ffffff;
+}
+
+.hamburger .checkbox:checked + label svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked + label svg .lineMid {
+  stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked + label svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .nav-list {
+      display: none; /* Esconde o menu por padrão em telas menores */
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      height: calc(100vh - 60px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .nav-list.active {
+      display: flex; /* Mostra o menu quando o ícone é clicado */
+  }
+
+  .hamburger {
+      display: flex; /* Exibe o ícone apenas em telas menores */
+  }
+
+  .nav-list li {
+      margin: 15px 0;
+      font-size: 3em;
+  }
+}
+
+/*botões navbar*/
+
+a {
+  text-decoration: none;
+}
+
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/*//////////////////////////////*/
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("notas.jpg");/*notas*/
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+.container {
+  margin: 150px auto;
+  width: 670px;
+  height: 90vh;
+  background-color: rgba(160, 155, 155, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+#filtro-tooltip {
+  width: 100%;
+  max-width: 250px;
+  padding: 8px;
+  font-size: 0.9rem;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#filtro-tooltip:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+.tooltip {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  max-width: px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.tooltip-detalhe {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  max-width: px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+
+ table {
+  width: 100%;
+  margin: 10px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+th, td {
+  padding: 8px;
+  border: 3px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #555;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para os campos de edição de notas */
+input[type="number"] {
+  width: 35px;
+  padding: 5px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/*Responsividade*/
+/* Responsividade para telas menores (máximo 768px) */
+@media (max-width: 768px) {
+
+  /* Ajuste no container */
+  .container {
+    margin: 20px auto;
+    width: 90%;
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  /* Tooltip e tabela */
+  .tooltip, .tooltip-detalhe, #filtro-tooltip {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  /* Botões */
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Inputs de número */
+  input[type="number"] {
+    width: 40px;
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  /* Ajuste do background-container */
+}
+

@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas - Código</title>
+    <link rel="stylesheet" href="codigo-styles.css">
+</head>
+<body>
+
+    <div class="background-container"></div>
+
+    <header>
+        <nav class="navbar">
+            <a class="navbar-title" href="index.html">Sistema de Notas</a>
+            <div class="mobile-menu-icon hamburger" onclick="toggleMenu()">
+                <input class="checkbox" type="checkbox" id="menu-checkbox" />
+                <label for="menu-checkbox">
+                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                        <path class="line lineTop" d="M6 11L44 11"></path>
+                        <path class="line lineMid" d="M6 24H43"></path>
+                        <path class="line lineBottom" d="M6 37H43"></path>
+                    </svg>
+                </label>
+            </div>
+            <ul class="nav-list" id="nav-list">
+              <li><a href="inicio-index.html" class="menu__link">Início</a></li>
+              <li><a href="doc-index.html" class="menu__link">Documentação</a></li>
+              <li><a href="PFinal-index.html" class="menu__link">Produto Final</a></li>
+              <li><a href="codigo-index.html" class="menu__link">Código</a></li>
+              <li><a href="fedbcks-index.html" class="menu__link">Feedbacks e Atualizações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h1>Código</h1>
+
+            <h2>HTML</h2>
+        
+            <p>HTML (Linguagem de Marcação de Hipertexto) é uma linguagem padrão utilizada
+                para estruturar e apresentar conteúdo na web. Ele é essencial para criar péginas
+                da internet e servir como base para exibir textos, imagens, links, vídeos, tabelas
+                e outros elementos visuais em navegadores. As principais características do HTML: 
+                faz o uso de tags(marcadores) para definir a estrutura do conteúdo, e cada tag tem
+                uma função específica e pode ser personalizada com atributos. Outra característica é que 
+                o HTML organiza o conteúdo de forma hierárquica, permitindo criar layouts consistentes
+                e compreensíveis. 
+            </p>
+        
+            <h3>Principais Tags Utilizadas no Projeto e Suas Funcionalidades</h3>
+        
+            <p>AVISO: todas as tags ficam entre os sinais "menor que" e "maior que". e algumas 
+                utilizam "/" para fechar as tags.   
+            </p>
+        
+            <dl>
+                <dt>!DOCTYPE html</dt>
+                <dd>É a tag que informa qual a versão do HTML deve ser usada para exibir a página. </dd>
+        
+                <dt>html lang="pt-br"</dt>
+                <dd>Esta tag define o idioma da página.</dd>
+        
+                <dt>Head</dt>
+                <dd>
+                    A tag head é utilizada para conter informações e configurações realcionadas a página,
+                    que não são diretamente exibidas no corpo da página para os usuários. 
+                </dd>
+        
+                <dt>Link</dt>
+                <dd> 
+                    Esta tag é utilizada para carregar recuros externos, como código CSS,
+                    para dentro do documento HTML.
+                </dd>
+        
+                <dt>Meta</dt>
+                <dd>
+                    Serve para descrever o conteúdo de uma página web para os mecanismos de busca 
+                    e navegadores.
+                </dd>
+        
+                <dt>Title</dt>
+                <dd>
+                    Serve para definir o título da página.
+                </dd>
+        
+                <dt>Div</dt>
+                <dd>Serve para a construção de layouts de páginas web
+                    e pode ser facilmente estilizado com o uso do CSS.
+                </dd>
+        
+                <dt>Header</dt>
+                <dd>
+                    Serve para representar o cabeçalho da página. 
+                </dd>
+        
+                <dt>Nav</dt>
+                <dd>
+                    Serve para indicar uma seção de uma página com links de navegação,
+                    apontando para outras páginas ou para outras áreas da página. 
+                </dd>
+        
+                <dt>A</dt>
+                <dd>
+                    Esta tag serve para criar uma âncora, ou seja, um vínculo para um recurso
+                    na web, como uma página, imagem, arquivo de som ou filme.
+                </dd>
+        
+                <dt>Label</dt>
+                <dd>
+                    A tag label se associada a um elemento do formulário permite que o usuário
+                    "clique" nesse elemento clicando em sua label. Essa funcionalidade é especialmente
+                    útil se for usada em checkbox, botões e radio buttons.
+                </dd>
+        
+                <dt>Svg</dt>
+                <dd>
+                    Esta tag é usada para criar um contexto gráfico vetorial no código HTML, 
+                    permitindo a inclusão de códigos SVG (Scalable Vector Graphics).
+                </dd>
+        
+                <dt>Path</dt>
+                <dd>
+                    Serve para definir um caminho e criar formas, curvas e linhas 
+                    em um SVG. Em conjunto com letras específicas, ela constrói o SVG.
+                </dd>
+        
+                <dt>UL e LI</dt>
+                <dd>
+                    O elemento UL serve para criar uma lista não ordenada, enquanto LI são
+                    os elementos da lista.
+                </dd>
+        
+                <dt>Script</dt>
+                <dd>
+                    É usada para incluir ou referenciar um script executável em documento 
+                    HTML. O script pode ser escrito diretamente na tag ou referenciado a partir 
+                    de um arquivo externo.
+                </dd>
+        
+                <dt>H1 e H2</dt>
+                <dd>
+                    A tag H1 serve para fazer o título principal da página, e H2 o subtitulo.
+                </dd>
+        
+                <dt>Table</dt>
+                <dd>
+                    Serve para cria tabelas em páginas web, apresentando dados de forma
+                    mais clara e facilitando a leitura. 
+                </dd>
+        
+                <dt>Thead</dt>
+                <dd>
+                    Serve para separar o conteúdo de uma tabela e adicionar um cabeçalho
+                    específico para ela.
+                </dd>
+        
+                <dt>Tr e Th</dt>
+                <dd>A tag tr cria uma linha dentro da tag table e acomoda diversas tags th 
+                    ou td que criam colunas dentro das linhas, formando uma tabela ou documento.
+                </dd>
+        
+                <dt>Tbody</dt>
+                <dd>
+                    Serve para agrupar as informações do conteúdo de uma tabela em HTML.
+                </dd>
+        
+                <dt>Button</dt>
+                <dd>
+                    É utilizada para inserir interatividade em uma página ou formulário
+                    e tem como função executar uma determinada ação ao receber um clique do usuário.
+                </dd>
+            </dl>
+
+            <h2>Código HTML Completo do Projeto:</h2>
+        </div>
+    </div>
+
+
+            <div class="card">
+                <div class="header">
+                  <div class="top">
+                    <div class="circle">
+                      <span class="red circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="yellow circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="green circle2"></span>
+                    </div>
+                    <div class="title">
+                      <p id="title2">ProdutoFinal.html</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="code-container">
+                  <textarea class="area" id="code" name="code" readonly="">
+                    
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Notas</title>
+  <link rel="stylesheet" href="ProdutoFinal.css">
+</head>
+<body>
+
+    <div class="background-container"></div>
+  <!-- Container Principal -->
+
+  <!-- navbar -->
+  <header>
+    <nav class="navbar">
+        <a class="navbar-title" href="login.html">Sistema de Notas</a>
+        <div class="mobile-menu-icon hamburger" onclick="toggleMenu()">
+            <input class="checkbox" type="checkbox" id="menu-checkbox" />
+            <label for="menu-checkbox">
+                <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                    <path class="line lineTop" d="M6 11L44 11"></path>
+                    <path class="line lineMid" d="M6 24H43"></path>
+                    <path class="line lineBottom" d="M6 37H43"></path>
+                </svg>
+            </label>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="inicio.html" class="menu__link">Início</a></li>
+            <li><a href="documentacao.html" class="menu__link">Documentação</a></li>
+            <li><a href="produtoFinal.html" class="menu__link">Produto Final</a></li>
+            <li><a href="codigo.html" class="menu__link">Código</a></li>
+            <li><a href="feedbacks.html" class="menu__link">Feedbacks e Atualizações</a></li>
+        </ul>
+    </nav>
+
+    <script src="ProdutoFinal.js"></script>
+  
+  <div class="container">
+    <h1>Sistema de Notas</h1>
+
+    <!-- Tabela Inicial com Turmas -->
+    <h2>Turmas</h2>
+    <table id="resumo-tabela">
+      <thead>
+        <tr>
+          <th>Turma</th>
+          <th>Média</th>
+          <th>Faltas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- As linhas serão carregadas dinamicamente -->
+      </tbody>
+    </table>
+
+    <!-- Tabela de Pesquisa e Alteração de Notas -->
+    <h2>Pesquisar Aluno e Alterar Nota</h2>
+    <div class="input-area">
+      <input type="text" id="pesquisa-aluno" placeholder="Digite o nome do aluno">
+      <button id="btn-pesquisar">Pesquisar</button> 
+    </div>
+
+    <table id="tabela-editar">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Turma</th>
+          <th>N1</th>
+          <th>N2</th>
+          <th>N3</th>
+          <th>N4</th>
+          <th>Média</th>
+          <th>Situação</th>
+          <th>Atualização</th>
+        </tr>
+      </thead>
+      <tbody class="resultado">
+        <!-- As linhas serão carregadas dinamicamente -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Tooltip para exibir detalhes de turma -->
+  <div id="tooltip" class="tooltip">
+    <h3 id="tooltip-titulo"></h3>
+    <input type="text" id="filtro-tooltip" placeholder="Filtrar alunos">
+    <table id="tooltip-tabela">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Média</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+  </div>
+
+  <!-- Tooltip detalhado do aluno -->
+  <div id="tooltip-detalhe" class="tooltip-detalhe"></div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="ProdutoFinal.js"></script>
+</body>
+</html>
+
+             </textarea>
+                  
+                </div>
+              </div>
+
+              <div class="css-container">
+                <div class="css-box">
+        <h2>CSS</h2>
+        
+        <p>
+            CSS(Cascading Style Sheets) é uma linguagem de marcação que serve para definir a aparência visual 
+            de uma página web. O CSS define como o conteúdo de uma página será exibido, incluindo cores, fontes,
+            espaçamentos, alinhamentos, tamanhos e layouts. Também permite criar efeitos, profundidade, animações,
+            páginas interativas e muitos mais. 
+        </p>
+        
+            <dl>
+                <dt>Font-family</dt>
+                <dd>
+                    Permite que se faça uma lista de prioridades de famílias de fontes e/ou 
+                    nome genéricos de famílias a serem especificados para um elemento selecionados.
+                </dd>
+        
+                <dt>Font-weight</dt>
+                <dd>
+                    Define peso ou a intensidade da fonte.
+                </dd>
+        
+                <dt>Font-style</dt>
+                <dd>
+                    Serve para definir o estilo da fonte.
+                </dd>
+        
+                <dt>Margin</dt>
+                <dd>
+                    Define a área de margem nos quatro lados do elemento.
+                </dd>
+        
+                <dt>Padding</dt>
+                <dd>
+                    Define a distância entre o conteúdo de um elemento e suas bordas.
+                </dd>
+        
+                <dt>Box-sizing</dt>
+                <dd>
+                    Serve para alterar a forma como o tamanho dos elementos é calculado no css.
+                </dd>
+        
+                <dt>Display</dt>
+                <dd>
+                    define o comportamento de um elemento em relação aos outros elementos de uma página web.
+                </dd>
+        
+                <dt>Justify-content</dt>
+                <dd>
+                    Usada para alinhar elementos ao longo do eixo principal de uma contêiner flexível.
+                </dd>
+        
+                <dt>Align-items</dt>
+                <dd>
+                    Controla o espaço entre as linhas de um contêiner flexível no eixo transversal.
+                </dd>
+        
+                <dt>Background-color</dt>
+                <dd>
+                    Define a cor de fundo de um elemento.
+                </dd>
+        
+                <dt>Color</dt>
+                <dd>
+                    Define a cor do texto de um elemento.
+                </dd>
+        
+                <dt>Position</dt>
+                <dd>
+                    Utilizada para determinar o posicionamento dos elementos na página.
+                </dd>
+        
+                <dt>Z-index</dt>
+                <dd>
+                    Especifica a ordem da pilha de um elemento do anúncio. 
+                </dd>
+        
+                <dt>Width</dt>
+                <dd>
+                    Determina a largura da área de conteúdo de um elemento.
+                </dd>
+        
+                <dt>Top</dt>
+                <dd>
+                    Usado para definir a posição vertical de um elemento em relação ao contêiner pai.
+                </dd>
+        
+                <dt>Left, Right</dt>
+                <dd>
+                    Usados para definir a posição horizontal de um elemento.
+                </dd>
+        
+                <dt>Margin-bottom</dt>
+                <dd>
+                    Define a margem inferior de um elemento.
+                </dd>
+        
+                <dt>Text-decoration</dt>
+                <dd>
+                    Usada para definir a formatação de textos, como sublinhado, linha superior e outros.
+                </dd>
+        
+                <dt>List-style</dt>
+                <dd>
+                    É usada para definir o estilo das listas HTML, como listas ordenadas "ol" e não ordenadas "ul".        
+                </dd>
+        
+                <dt>Margin-left</dt>
+                <dd>
+                    Define as dimensões da margem esquerda de um elemento.
+                </dd>
+        
+                <dt>Height</dt>
+                <dd>
+                    Determina a altura da áres do conteúdo de um elemento. 
+                </dd>
+        
+                <dt>Cursor</dt>
+                <dd>
+                    Define o cursor do mouse que é exibido quando o ponteiro do mouse está sobre um elemento. 
+                </dd>
+        
+                <dt>Opacity</dt>
+                <dd>
+                    Serve para definir a transparência de um elemento.
+                </dd>
+        
+                <dt>Transition</dt>
+                <dd>
+                    Serve para controlar a velocidade de uma animação quando há alteraçõpes em propriedades CSS.
+                </dd>
+        
+                <dt>Stroke-width</dt>
+                <dd>
+                    Define o traçado como: cores, espessura, padrão de traços e etc.
+                </dd>
+        
+                <dt>Transform</dt>
+                <dd>
+                    Serve para modificar o espaço coordenado do modelo de formatação CSS.
+                </dd>
+        
+                <dt>Transform-origin</dt>
+                <dd>
+                    Permite alterar a posição em elementos transformados.
+                </dd>
+                
+                <dt>Flex-direction</dt>
+                <dd>
+                    Permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal.
+                </dd>
+        
+                <dt>Align-items</dt>
+                <dd>
+                    Controla o alinhamento de todos os itens no eixo transversal.
+                </dd>
+        
+                <dt>Line-height</dt>
+                <dd>
+                    Utilizadapara definir espaçamento entre as linhas de um texto, ou seja, a altura
+                    da caixa que o conteúdo de texto ocupa.
+                </dd>
+        
+                <dt>Bottom</dt>
+                <dd>
+                    Serve para definir a posição vertical de um elemento em relação à sua borda inferior.
+                </dd>
+        
+                <dt>Background</dt>
+                <dd>
+                    Serve para definir os valores de fundo de um elemento em um único lugar na folha de estilo.
+                </dd>
+        
+                <dt>Min-height</dt>
+                <dd>
+                    Serve para definir a altura mínima de um elemento.
+                </dd>
+        
+                <dt>Box-shadow</dt>
+                <dd>
+                    É utilizado para adicionar efeitos de sombra em volta de um elemento.
+                </dd>
+        
+                <dt>Border</dt>
+                <dd>
+                    É uma propriedade que adiciona um contorno em volta de um elemento HTML.
+                    Pode ser utilizado também border-radius que serve para arredondar as bordas.
+                </dd>
+        
+                <dt>Outline</dt>
+                <dd>
+                    Uma propriedade abreviada para definir a largura do contorno, o estilo do contorno
+                    e a cor do contorno em uma declaração. 
+                </dd>
+        
+                <dt>Text-align</dt>
+                <dd>
+                    Serve para alinhr o texto dentro de um elemento. 
+                </dd>
+            </dl>
+
+            <h2>Código CSS Completo do Projeto:</h2>
+                </div>
+              </div>
+
+              <div class="css-card">
+                <div class="css-header">
+                  <div class="css-top">
+                    <div class="css-circle">
+                      <span class="css-red circle2"></span>
+                    </div>
+                    <div class="css-circle">
+                      <span class="css-yellow circle2"></span>
+                    </div>
+                    <div class="css-circle">
+                      <span class="css-green circle2"></span>
+                    </div>
+                    <div class="css-title">
+                      <p id="css-title2">ProdutoFinal.css</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="csscode-container">
+                  <textarea class="area" id="css-code" name="css-code" readonly="">
+                    /*fonte*/
+
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* aplica a fonte em todo o conteúdo da página*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/*//////////////////////////////////////////////////////*/
+
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  position: fixed; /* ou fixed para mantê-la fixa ao rolar a página */
+  z-index: 10; /* Garante que a navbar fique acima do fundo */
+  width: 100%; /* Garante que ocupe toda a largura */
+  top: 0; /* Para alinhar ao topo se for fixed */
+  left: 0; /* Para alinhar ao lado esquerdo */
+  box-sizing: border-box; /* Inclui o padding dentro do tamanho total */
+  margin-bottom: 40px;
+}
+.navbar-title {
+  font-size: 2.2em;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilo do ícone do menu mobile */
+.hamburger {
+  display: none; /* Ícone escondido por padrão */
+  height: 50px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: #ffffff;
+}
+
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+/* Animações para o menu mobile */
+.hamburger .checkbox:checked + label svg .line {
+  stroke: #ffffff;
+}
+
+.hamburger .checkbox:checked + label svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked + label svg .lineMid {
+  stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked + label svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .nav-list {
+      display: none; /* Esconde o menu por padrão em telas menores */
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      height: calc(100vh - 60px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .nav-list.active {
+      display: flex; /* Mostra o menu quando o ícone é clicado */
+  }
+
+  .hamburger {
+      display: flex; /* Exibe o ícone apenas em telas menores */
+  }
+
+  .nav-list li {
+      margin: 15px 0;
+      font-size: 3em;
+  }
+}
+
+/*botões navbar*/
+
+a {
+  text-decoration: none;
+}
+
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/*//////////////////////////////*/
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("notas.jpg");/*notas*/
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+.container {
+  margin: 150px auto;
+  width: 670px;
+  height: 720px;
+  background-color: rgba(160, 155, 155, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+#filtro-tooltip {
+  width: 100%;
+  max-width: 250px;
+  padding: 8px;
+  font-size: 0.9rem;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#filtro-tooltip:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+.tooltip {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  max-width: px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.tooltip-detalhe {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  max-width: px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+
+ table {
+  width: 100%;
+  margin: 10px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+th, td {
+  padding: 8px;
+  border: 3px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #555;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para os campos de edição de notas */
+input[type="number"] {
+  width: 35px;
+  padding: 5px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/*Responsividade*/
+/* Responsividade para telas menores (máximo 768px) */
+@media (max-width: 768px) {
+
+  /* Ajuste no container */
+  .container {
+    margin: 20px auto;
+    width: 90%;
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  /* Tooltip e tabela */
+  .tooltip, .tooltip-detalhe, #filtro-tooltip {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  /* Botões */
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Inputs de número */
+  input[type="number"] {
+    width: 40px;
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  /* Ajuste do background-container */
+}
+
+
+             </textarea>
+                  
+                </div>
+              </div>
+
+  
+
+              <div class="java-container">
+                <div class="java-box">
+        
+            <h2>JavaScript</h2>
+        
+            <p>
+                JavaScript é uma linguagem de programação que permite criar conteúdo que se 
+                atualiza dinamicamente, controlar múltimídias, imagens animadas, e etc. 
+            </p>
+        
+            <h3>Resumo do Código Utilizado no Projeto</h3>
+        
+            <p>
+                Iniciamos o código com a função "toggleMenu()" que serve para alternar a visibilidade do
+                menu de navegação e também modificar a aparência do ícone que ativa o menu, criando uma 
+                interação em que o menu pode ser aberto ou fechado ao clicar no ícone. Onde facilita o uso 
+                do menu para dispositivos menores como smartphones por exemplo.
+            </p>
+        
+            <p>
+                Já no segundo bloco de código, na primeira linha do código escuta o evento DOMContentLoaded
+                no objeto document, e quando esse evento ocorre(ou seja, quando o DOM da página é carregado), ela 
+                executa a função fornecida. Dentro dessa função, o código manipula elementos da página, selecionando 
+                tabelas, tooltips e inicializando variáveis. 
+            </p>
+            <p>
+                Agora no terceiro bloco de código, utilizamos a função "carregarArquivoExcel()" para carregar um 
+                arquivo Excel "notas_estudantes.xlsx" usando a API fetch, converte os dados da primeira planilha para JSON
+                e então chama a função "processarDados()" para processá-los. Caso ocorra algum erro durante o processo,
+                ele é capturado e exibido no console.
+            </p>
+        
+            <p>
+                No quarto bloco de código inserimos a função "processarDados(data)" e realizamos os seguintes passos: 
+                para cada aluno calcula sua média, determina sua situação e organiza as informações por turma. Atualiza o 
+                objeto "turmas" com as médias totais, faltas e a contagem de alunos em cada situação. Ao final, chama a função 
+                "exibirResumo(turmas)" para exibir um resumo de todas as turmas, e cria um novo array "alunos" com as informações
+                simplificadas de cada aluno.
+            </p>
+        
+            <p>
+                No quinto bloco de código usamos a função "calcularSituação(media, faltas)" que determina a situação dos alunos
+                com base nos critérios: se tem mais de 10 faltas é reprovado por faltas, se a média for menor que 2 ele é reprovado
+                por nota, se a média for menor que 7 (mas maior ou igual a 2) ele está de recuperação e por último se a média for 7 
+                ou maior ele é aprovado.
+            </p>
+        
+            <p>
+                No sexto utilizamos a função "exibirResumo(turmas)" onde a função: limpa a tabela existente, preenche a tabela com as informações 
+                de cada turma(nome, média e total de faltas). Adiciona dois eventos de mouse sobre as linhas da tabela: quando o mouse passa sobre 
+                uma linha (mouseover), exibe um tooltip com mais detalhes sobre a turma e quando o mouse sai da linha (mouseout), ocuta o tooltip 
+                após um pequeno atraso.
+            </p>
+            <p>
+                No sétimo bloco, a função "mostrarTooltip(event, turma, alunos)" exibe uma tooltip detalhada para uma turma quando o usuário passa o 
+                mouse sobre uma linha da tabela de resumo das turmas. A tooltip mostra uma tabela com o nome, média e situação de cada aluno da turma.
+                A função permite interações: exibe detalhes do aluno em uma tooltip adicional quando o mouse passa sobre o aluno, posiciona a tooltip próxima
+                ao cursor, permite filtrar a tabela de alunos na tooltip com base em um campo de pesquisa e controla a exibição e ocultação da tooltip conforme
+                o mouse interage com ela. 
+            </p>
+        
+            <p>
+                No oitavo bloco definimos a segunda tooltip com a função "mostrarTooltipDeatlhe(event, aluno)" exibe uma tooltip detalhada sobre um aluno
+                com informações como nome, notas, média, situação e faltas. Ela é posicionada próxima ao mouse e contém interatividade, como: exibição dinâmica 
+                de dados do aluno, posicionamento da tooltip ao lado do cursor, ocultação da tooltip após o mouse sair e exibição de uma tabela dentro da tooltip 
+                com as notas do aluno. 
+            </p>
+        
+            <p>
+                No nono e no décimo bloco são utilizadas funções para esconder as tooltips quando o mouse não estiver sobre elas. Na primeira função esconde a tooltip
+                de detalhes do aluno, geralmente chamada quando o mouse sai da área da tooltip, mantendo a tooltip de turmas ainda ativa. Na segunda função esconde a 
+                tooltip de turma. 
+            </p>
+        
+            <p>
+               No décimo primeiro bloco definimos a tabela de edição de notas de alunos aonde pode ser divido em duas etapas. Na primeira etapa o código permite que o usuário 
+               pesquise por nome de aluno, quando um nome é digitdo e o botão de pesquisa é clicado, o sistema encontra os alunos cujo nome contém a string pesquisada, exibe-os
+               em uma tabela de edição que permite atualizar as notas diretamente. Na segunda etapa a tabela é dinamicamente preenchida com: nome, turma, notas, média e situação 
+               do aluno com campos de entrada nas notas para que seja possível atualizar as notas e um botão de atualizar.
+            </p>
+        
+            <p>
+                No décimo segundo bloco a função "atualizarNotas(aluno)" recupera os valores das notas inseridas pelo usuário na tabela de edição, atualiza as notas do aluno, racalcula 
+                a média e a situação do aluno, atualiza a tabela de edição para refletir com os novos valores de média e situação e chama as funções auxiliares para atualizar a tabela resumo
+                e a tooltip.
+            </p>
+        
+            <p>
+                No décimo terceiro bloco a função "atualizarResumo" atualiza a média da turma na tabela de resumo quando as notas de um aluno são alteradas. Ela recalcula a média total da turma
+                e reflete isso na tabela de resumo. E no último bloco a função "atualizarTooltip" atualiza a tooltip exibida quando o usuário passa o mouse sobre o nome de um aluno. As informações 
+                da média e situação do aluno são atualizadas visualmente nas tooltips. No final do código, a função "carregarArquivoExcel()" é chamada para carregar os dados e inicializar as variáveis 
+                e a tabela de informações.
+            </p>
+            
+            <h2>Código JavaScript Completo do Projeto:</h2>
+
+        </div>
+    </div>
+
+    <div class="java-card">
+        <div class="java-header">
+          <div class="java-top">
+            <div class="java-circle">
+              <span class="java-red circle2"></span>
+            </div>
+            <div class="java-circle">
+              <span class="java-yellow circle2"></span>
+            </div>
+            <div class="java-circle">
+              <span class="java-green circle2"></span>
+            </div>
+            <div class="java-title">
+              <p id="java-title2">ProdutoFinal.js</p>
+            </div>
+          </div>
+        </div>
+        <div class="javacode-container">
+          <textarea class="area" id="java-code" name="java-code" readonly="">
+            
+// navbar //
+function toggleMenu() {
+    const navList = document.getElementById("nav-list");
+    const menuIcon = document.querySelector(".mobile-menu-icon");
+    
+    navList.classList.toggle("active");
+    menuIcon.classList.toggle("active");
+}
+/////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabelaResumo = document.getElementById('resumo-tabela').getElementsByTagName('tbody')[0];
+    const tabelaEditar = document.getElementById('tabela-editar').getElementsByTagName('tbody')[0];
+    const tooltip = document.getElementById('tooltip');
+    const tooltipDetalhe = document.getElementById('tooltip-detalhe');
+    const filtroTooltip = document.getElementById('filtro-tooltip');
+    let tooltipAtivo = false;
+    let tooltipDetalheAtivo = false;
+    let turmas = {};
+    let alunos = [];
+
+    // Função para carregar o arquivo Excel
+    function carregarArquivoExcel() {
+        const url = 'notas_estudantes.xlsx';
+        fetch(url)
+            .then(response => response.arrayBuffer())
+            .then(data => {
+                const workbook = XLSX.read(data, { type: "array" });
+                const sheetName = workbook.SheetNames[0];
+                const sheet = workbook.Sheets[sheetName];
+                const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+                processarDados(jsonData);
+            })
+            .catch(error => console.error("Erro ao carregar o arquivo Excel:", error));
+    }
+
+    // Função para processar os dados do Excel
+    function processarDados(data) {
+        data.slice(1).forEach(row => {
+            const [nome, turma, nota1, nota2, nota3, nota4, faltas] = row;
+            const media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4)) / 4;
+            let situacao = calcularSituacao(media, faltas);
+
+            if (!turmas[turma]) {
+                turmas[turma] = {
+                    mediaTotal: 0,
+                    totalAlunos: 0,
+                    totalFaltas: 0,
+                    alunos: [],
+                    situacoes: { "Aprovado": 0, "Reprovado por faltas": 0, "Reprovado por nota": 0, "Recuperação": 0 }
+                };
+            }
+
+            turmas[turma].mediaTotal += media;
+            turmas[turma].totalAlunos += 1;
+            turmas[turma].totalFaltas += parseInt(faltas);
+            turmas[turma].alunos.push({ nome, turma, nota1, nota2, nota3, nota4, media, situacao, faltas });
+            turmas[turma].situacoes[situacao] += 1;
+        });
+
+        exibirResumo(turmas);
+
+        alunos = data.slice(1).map(row => {
+            const [nome, turma, nota1, nota2, nota3, nota4, faltas] = row;
+            const media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4)) / 4;
+            return { nome, turma, nota1, nota2, nota3, nota4, faltas, media };
+        });
+    }
+
+    // Função para calcular a situação do aluno
+    function calcularSituacao(media, faltas) {
+        if (faltas > 10) return "Reprovado por faltas";
+        if (media < 2) return "Reprovado por nota";
+        if (media < 7) return "Recuperação";
+        return "Aprovado";
+    }
+
+    // Função para exibir a tabela resumo com as médias das turmas
+    function exibirResumo(turmas) {
+        tabelaResumo.innerHTML = ''; // Limpa a tabela antes de preencher
+
+        for (const turma in turmas) {
+            const { mediaTotal, totalAlunos, totalFaltas, alunos } = turmas[turma];
+            const mediaTurma = (mediaTotal / totalAlunos).toFixed(2);
+            const row = tabelaResumo.insertRow();
+            row.insertCell(0).innerText = turma;
+            row.insertCell(1).innerText = mediaTurma;
+            row.insertCell(2).innerText = totalFaltas;
+
+            row.addEventListener('mouseover', function (event) {
+                tooltipAtivo = true;
+                mostrarTooltip(event, turma, alunos);
+            });
+
+            row.addEventListener('mouseout', function () {
+                tooltipAtivo = false;
+                setTimeout(function () {
+                    if (!tooltipAtivo && !tooltipDetalheAtivo) esconderTooltip();
+                }, 500);
+            });
+        }
+    }
+
+    function mostrarTooltip(event, turma, alunos) {
+        const tabelaTooltip = document.getElementById('tooltip-tabela').getElementsByTagName('tbody')[0];
+        tabelaTooltip.innerHTML = ''; // Limpa a tabela
+        document.getElementById('tooltip-titulo').innerText = `Série: ${turma}`;
+    
+        alunos.forEach(aluno => {
+            const row = tabelaTooltip.insertRow();
+            row.insertCell(0).innerText = aluno.nome;
+            row.insertCell(1).innerText = aluno.media.toFixed(2);
+            const situacaoCell = row.insertCell(2);
+            situacaoCell.innerText = aluno.situacao;
+    
+            // Aplica a classe de situação
+            if (aluno.situacao === "Aprovado") {
+                situacaoCell.className = 'status-aprovado';
+            } else if (aluno.situacao === "Reprovado por faltas" || aluno.situacao === "Reprovado por nota") {
+                situacaoCell.className = 'status-reprovado';
+            } else if (aluno.situacao === "Recuperação") {
+                situacaoCell.className = 'status-recuperacao';
+            }
+    
+            // Adiciona os event listeners apenas uma vez
+            row.cells[0].addEventListener('mouseover', function (event) {
+                tooltipDetalheAtivo = true;
+                mostrarTooltipDetalhe(event, aluno);
+            });
+    
+            row.cells[0].addEventListener('mouseout', function () {
+                tooltipDetalheAtivo = false;
+                setTimeout(function () {
+                    if (!tooltipDetalheAtivo) esconderTooltipDetalhe();
+                }, 500);
+            });
+        });
+    
+        // Posiciona a tooltip no cursor
+        const x = event.clientX + 10;
+        const y = event.clientY + 10;
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+    
+        // Exibe a tooltip próxima ao cursor
+        tooltip.style.display = 'block';
+        tooltip.style.position = 'absolute';
+    
+        // Filtra a tabela quando o filtro é alterado
+        filtroTooltip.addEventListener('input', function () {
+            filtrarTooltipTabela(alunos);
+        });
+    
+        // Controla a exibição/ocultação da tooltip geral
+        tooltip.addEventListener('mouseover', function () {
+            tooltipAtivo = true;
+        });
+    
+        tooltip.addEventListener('mouseout', function () {
+            tooltipAtivo = false;
+            setTimeout(function () {
+                if (!tooltipAtivo && !tooltipDetalheAtivo) esconderTooltip();
+            }, 1000);
+        });
+    }
+    
+    function mostrarTooltipDetalhe(event, aluno) {
+        tooltipDetalhe.innerHTML = `
+            <div style="padding: 10px; font-size: 16px; background-color: #fff;">
+                <strong>Nome:</strong> ${aluno.nome}<br>
+                <hr>
+                <table style="width: 100%; text-align: left;">
+                    <tr>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Nota 4</th>
+                    </tr>
+                    <tr>
+                        <td>${aluno.nota1}</td>
+                        <td>${aluno.nota2}</td>
+                        <td>${aluno.nota3}</td>
+                        <td>${aluno.nota4}</td>
+                    </tr>
+                </table>
+                <hr>
+                <br>
+                <strong>Média:</strong> ${aluno.media.toFixed(2)}<br><br>
+                <strong>Situação:</strong> ${aluno.situacao}<br><br>
+                <strong>Faltas:</strong> ${aluno.faltas}
+            </div>
+        `;
+    
+        const x = event.clientX + 10;
+        const y = event.clientY + 10;
+        tooltipDetalhe.style.left = `${x}px`;
+        tooltipDetalhe.style.top = `${y}px`;
+    
+        // Exibe a tooltip de detalhes
+        tooltipDetalhe.style.display = 'block';
+        tooltipDetalhe.style.position = 'absolute';
+    
+        tooltipDetalhe.addEventListener('mouseover', function () {
+            tooltipDetalheAtivo = true;
+        });
+    
+        tooltipDetalhe.addEventListener('mouseout', function () {
+            tooltipDetalheAtivo = false;
+            setTimeout(function () {
+                if (!tooltipDetalheAtivo) esconderTooltipDetalhe();
+            }, 500);
+        });
+    }
+    
+    function esconderTooltipDetalhe() {
+        tooltipDetalhe.style.display = 'none';
+    }
+    
+    function esconderTooltip() {
+        if (!tooltipAtivo) {
+            tooltip.style.display = 'none';
+        }
+    }
+
+
+    // Função de pesquisa de aluno
+    document.getElementById('btn-pesquisar').addEventListener('click', function() {
+        const nomePesquisa = document.getElementById('pesquisa-aluno').value.trim().toLowerCase();
+        const alunosEncontrados = alunos.filter(aluno => aluno.nome.toLowerCase().includes(nomePesquisa));
+
+        tabelaEditar.innerHTML = ''; // Limpar tabela de edição
+
+        alunosEncontrados.forEach(aluno => {
+            const row = tabelaEditar.insertRow();
+            row.insertCell(0).innerText = aluno.nome;
+            row.insertCell(1).innerText = aluno.turma;
+
+            // Adiciona os campos para as notas e média
+            row.insertCell(2).innerHTML = `<input type="number" value="${aluno.nota1}" id="nota1-${aluno.nome}">`;
+            row.insertCell(3).innerHTML = `<input type="number" value="${aluno.nota2}" id="nota2-${aluno.nome}">`;
+            row.insertCell(4).innerHTML = `<input type="number" value="${aluno.nota3}" id="nota3-${aluno.nome}">`;
+            row.insertCell(5).innerHTML = `<input type="number" value="${aluno.nota4}" id="nota4-${aluno.nome}">`;
+            row.insertCell(6).innerText = aluno.media.toFixed(2);
+            row.insertCell(7).innerText = aluno.situacao;
+
+            // Adiciona o botão de "Atualizar"
+            row.insertCell(8).innerHTML = `<button class="btn-atualizar" id="btn-atualizar-${aluno.nome}">Atualizar</button>`;
+            
+            // Botão de atualização
+            document.getElementById(`btn-atualizar-${aluno.nome}`).addEventListener('click', function() {
+                atualizarNotas(aluno);
+            });
+        });
+    });
+
+    // Função para atualizar as notas e a situação do aluno
+    function atualizarNotas(aluno) {
+        const nota1 = parseFloat(document.getElementById(`nota1-${aluno.nome}`).value);
+        const nota2 = parseFloat(document.getElementById(`nota2-${aluno.nome}`).value);
+        const nota3 = parseFloat(document.getElementById(`nota3-${aluno.nome}`).value);
+        const nota4 = parseFloat(document.getElementById(`nota4-${aluno.nome}`).value);
+
+        aluno.nota1 = nota1;
+        aluno.nota2 = nota2;
+        aluno.nota3 = nota3;
+        aluno.nota4 = nota4;
+
+        // Recalcula a média e situação
+        aluno.media = (nota1 + nota2 + nota3 + nota4) / 4;
+        aluno.situacao = calcularSituacao(aluno.media, aluno.faltas);
+        ////////////////////////////////////////////////////////////
+        
+
+        // Atualiza a célula de média na tabela de edição
+        const row = Array.from(tabelaEditar.rows).find(row => row.cells[0].innerText === aluno.nome);
+        if (row) {
+            row.cells[6].innerText = aluno.media.toFixed(2);
+            row.cells[7].innerText = aluno.situacao;
+        }
+
+        // Atualiza a média na tabela de resumo
+        atualizarResumo(aluno);
+        atualizarTooltip(aluno);
+    }
+
+    // Função para atualizar a média na tabela de resumo
+    function atualizarResumo(alunoAlterado) {
+        for (const turma in turmas) {
+            const turmaData = turmas[turma];
+            const alunoIndex = turmaData.alunos.findIndex(aluno => aluno.nome === alunoAlterado.nome);
+            if (alunoIndex !== -1) {
+                turmaData.alunos[alunoIndex] = alunoAlterado;
+
+                // Recalcula a média total da turma
+                turmaData.mediaTotal = turmaData.alunos.reduce((acc, aluno) => acc + aluno.media, 0);
+                const novaMediaTurma = (turmaData.mediaTotal / turmaData.totalAlunos).toFixed(2);
+
+                // Atualiza a média na tabela de resumo
+                const linhaTurma = tabelaResumo.querySelector(`tr:nth-child(${Object.keys(turmas).indexOf(turma) + 1})`);
+                linhaTurma.cells[1].innerText = novaMediaTurma;
+            }
+        }
+    }
+
+    function atualizarTooltip(alunoAlterado) {
+        const tabelaTooltip = document.getElementById('tooltip-tabela').getElementsByTagName('tbody')[0];
+        const rows = Array.from(tabelaTooltip.rows);
+        rows.forEach(row => {
+            if (row.cells[0].innerText === alunoAlterado.nome) {
+                row.cells[1].innerText = alunoAlterado.media.toFixed(2);
+                row.cells[2].innerText = alunoAlterado.situacao;
+
+                // Aplica a classe de situação
+                if (alunoAlterado.situacao === "Aprovado") {
+                    row.cells[2].className = 'status-aprovado';
+                } else if (alunoAlterado.situacao === "Reprovado por faltas" || alunoAlterado.situacao === "Reprovado por nota") {
+                    row.cells[2].className = 'status-reprovado';
+                } else if (alunoAlterado.situacao === "Recuperação") {
+                    row.cells[2].className = 'status-recuperacao';
+                }
+            }
+        });
+    }
+
+    // Carregar os dados ao inicializar
+    carregarArquivoExcel();
+});
+
+     </textarea>
+          
+        </div>
+      </div>
+    
+        <script src="codigo-script.js"></script>
+    
+</body>
+</html>

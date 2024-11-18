@@ -1,0 +1,627 @@
+/*botões navbar*/
+
+a {
+    text-decoration: none;
+  }
+
+  .menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+
+
+
+/* FONTE */
+.ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 10; /* Garante que a navbar fique acima do fundo */
+}
+
+.navbar-title {
+    font-size: 2.2em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo do ícone do menu mobile */
+.hamburger {
+    display: none; /* Ícone escondido por padrão */
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.line {
+    transition: 0.5s;
+    stroke-width: 6px;
+    stroke: #ffffff;
+}
+
+.lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+}
+
+.lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+}
+
+.lineMid {
+    stroke-dasharray: 40 40;
+}
+
+/* Animações para o menu mobile */
+.hamburger .checkbox:checked + label svg .line {
+    stroke: #ffffff;
+}
+
+.hamburger .checkbox:checked + label svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked + label svg .lineMid {
+    stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked + label svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list.active {
+        display: flex; /* Mostra o menu quando o ícone é clicado */
+    }
+
+    .hamburger {
+        display: flex; /* Exibe o ícone apenas em telas menores */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+        font-size: 3em;
+    }
+}
+
+/* Fundo da página */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("doc2.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .background-container {
+        background-repeat: repeat-x; /* Repete a imagem no eixo X */
+        background-size: cover; /* Garante que a imagem cubra toda a tela */
+
+    }
+}
+
+.cx-texto {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.container-imagens {
+    display: flex;
+    flex-direction: column; /* Empilha as divs de imagens verticalmente */
+    gap: 20px; /* Espaço entre as divs de imagens */
+}
+
+
+
+.cx-img{
+    width: 200px;  /* largura do container */
+    height: 200px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+}
+
+.cx-img img {
+    float: left;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+.imagem-container{
+    width: 200px;  /* largura do container */
+    height: 180px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+}
+
+.imagem-container img {
+    float: left;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.texto {
+    display: flex;/*flex: 1; o texto ocupa o espaço disponível*/
+    flex-direction: column;
+    max-width: 600px;/*max-width: 60%; limita a largura do texto para não ocupar toda a linha*/
+}
+
+.texto p {
+    margin: 0 0 10px 0;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.box-txt {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+
+.img-ctn {
+    display: flex;
+    flex-direction: column; /* Empilha as divs de imagens verticalmente */
+    gap: 20px; /* Espaço entre as divs de imagens */
+}
+
+
+
+.caixa-img{
+    width: 200px;  /* largura do container */
+    height: 200px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+}
+
+.caixa-img img {
+    float: left;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+.img-ctn{
+    width: 200px;  /* largura do container */
+    height: 180px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+}
+
+.img-ctn img {
+    float: left;
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.txt {
+    display: flex;/*flex: 1; o texto ocupa o espaço disponível*/
+    flex-direction: column;
+    max-width: 600px;/*max-width: 60%; limita a largura do texto para não ocupar toda a linha*/
+    flex: 1;
+}
+
+.txt p {
+    margin: 0 0 10px 0;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+.caixt {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.responsividade {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.bx-responsividade{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.lag-img{
+    width: 200px;  /* largura do container */
+    height: 300px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+}
+
+.lag-img img {
+    float: left;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.interatividade {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    
+}
+
+.interatividade p {
+    width: 650px;
+}
+
+
+.box-interatividade {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+    
+}
+
+.armazenamento{
+    width: 800px;  /* largura do container */
+    height: 200px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.armazenamento img {
+    float: left;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+.html{
+    width: 800px;  /* largura do container */
+    height: 150px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.html img {
+    float: left;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.css-img {
+    width: 800px;  /* largura do container */
+    height: 150px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.css-img img {
+    float: left;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+.script-img {
+    width: 800px;  /* largura do container */
+    height: 150px; /* altura do container */
+    border: 2px solid #333; /* borda ao redor do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* esconde o que ultrapassa o container */
+    background-color: #f0f0f0; /* cor de fundo opcional */
+    border-radius: 20px;
+    flex-direction:  column;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.script-img img {
+    float: left;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+
+/* Alinhamento do conteúdo */
+.container {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 2000px;
+    height: -20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 900px;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo apareça acima do fundo */
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 10px;
+}
+
+
+@media(max-width: 768px) {
+    .box {
+        width: 100%;
+        height: 2085vh;
+    }
+
+    .container {
+        width: 100%;
+        height: 2100vh;
+    }
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+    margin-bottom: 10px;
+}
+
+#descricao, #titulo-principal, #subtitulo {
+    text-align: center;
+}
+
+#titulo-principal {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#subtitulo {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#descricao {
+    margin-bottom: 10px;
+}
+
+#descricao, p {
+    font-size: 20px;
+}
+
+#sub-subtitulo {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#destaque {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
